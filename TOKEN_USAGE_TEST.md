@@ -52,5 +52,9 @@ if it stops, there's no record. (This doc is the one lasting thing — it captur
 
 ## Run log
 
-_(Append short notes per run here: when, how many succeeded, any prompts that
-hit the 3× retry limit. Keep it terse.)_
+- **2026-06-27** — Full pass of all 100 prompts, in order. **93 succeeded, 7
+  gave up** after 3 retries each: prompts **9, 15, 16, 17, 18, 27, 51**. Every
+  give-up was an *upstream* Neuralwatt timeout (Cloudflare `524` /
+  origin read-timeout) on the largest generations — not a local issue. Final
+  cumulative stats reported by the server: ~620k total tokens, ~$0.0496 total
+  cost, ~0.0099 kWh, cost/million ≈ **$0.080**.
